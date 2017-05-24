@@ -7,9 +7,12 @@
 
 # 截图
 
-主界面
-![Image text](https://github.com/zealzhu/MyVideo/blob/master/img-folder/main.png)
-播放界面
+主界面  
+
+![Image text](https://github.com/zealzhu/MyVideo/blob/master/img-folder/main.png)  
+
+播放界面  
+
 ![Image text](https://github.com/zealzhu/MyVideo/blob/master/img-folder/play.png)
 
 # 使用接口
