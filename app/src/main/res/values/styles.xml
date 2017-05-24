@@ -1,0 +1,26 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_back_home</item>
+        <item name="android:actionOverflowButtonStyle">@style/OverFlowButtonStyle</item>
+    </style>
+
+    <!--菜单溢出图标-->
+    <style name="OverFlowButtonStyle">
+        <item name="android:src">@drawable/ic_menu_moreoverflow</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="VideoDetailActivityTheme" parent="AppTheme">
+
+    </style>
+
+</resources>
