@@ -27,15 +27,6 @@ public class BilibiliSearchFragment extends BaseFragment<BilibiliContract.View, 
     private SwipeRefreshLayout mSwipeRefreshLayout;
     private List<BilibiliSearchVideoInfo.Data.Items.Archive> list;
     private String name;
-    private int page;
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setPage(int page) {
-        this.page = page;
-    }
 
     public BilibiliSearchFragment() {
         // Required empty public constructor
@@ -54,7 +45,6 @@ public class BilibiliSearchFragment extends BaseFragment<BilibiliContract.View, 
         View view = inflater.inflate(R.layout.fragment_bilibili_search, container, false);
         mSwipeRefreshLayout = (SwipeRefreshLayout)view.findViewById(R.id.swipe_refresh_layout);
 
-
         RecyclerView recyclerView = (RecyclerView)view.findViewById(R.id.recommend_recycle_view);
         //设置适配器
         list = new ArrayList<>();
@@ -69,7 +59,7 @@ public class BilibiliSearchFragment extends BaseFragment<BilibiliContract.View, 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mPresenter.loadBilibili(name, page);
+        mPresenter.loadBilibili(name, 1);
     }
 
     @Override
@@ -92,5 +82,15 @@ public class BilibiliSearchFragment extends BaseFragment<BilibiliContract.View, 
     @Override
     public void hideRefresh() {
         mSwipeRefreshLayout.setRefreshing(false);
+    }
+
+    @Override
+    public void refreshList() {
+        mPresenter.loadBilibili(name, 1);
+    }
+
+    @Override
+    public void setSearchName(String name) {
+        this.name = name;
     }
 }

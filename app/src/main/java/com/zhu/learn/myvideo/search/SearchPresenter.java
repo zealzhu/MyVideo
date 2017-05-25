@@ -13,10 +13,9 @@ class SearchPresenter extends SearchContract.Presenter {
     SearchPresenter() {
         mHandler = new Handler(Looper.getMainLooper());
     }
+
     @Override
-    void loadDatas(String name, int page) {
-
+    void loadDatas(String name) {
+        mView.notifyFragmentRefresh(name);
     }
-
-
 }

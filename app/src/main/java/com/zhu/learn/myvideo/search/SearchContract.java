@@ -12,10 +12,9 @@ import java.util.List;
 
 public interface SearchContract {
     abstract class Presenter extends BasePresenter<View> {
-        abstract void loadDatas(String name, int page);
-
+        abstract void loadDatas(String name);
     }
     interface View extends BaseView {
-
+        void notifyFragmentRefresh(String name);
     }
 }
